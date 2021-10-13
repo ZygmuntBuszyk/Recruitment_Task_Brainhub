@@ -1,7 +1,7 @@
 # Backend part of Recruitment Task 
 I 've used Node.js server (with configured Typescript)  as well as MongoDb database (on local server)
 
-## Scripts- TODO
+## Scripts 
 In the project directory, you can run:
 
 ### `npm start`
@@ -15,7 +15,6 @@ You will also see any lint errors in the console.
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
@@ -24,6 +23,4 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
