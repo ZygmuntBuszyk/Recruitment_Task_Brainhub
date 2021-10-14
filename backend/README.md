@@ -2,7 +2,7 @@
 I've used Node.js server (with configured Typescript) as well as MongoDb database (on local server).\
 For tests I've used JEST.
 
-## Scripts- TODO
+## Scripts
 
 ### `npm run start:dev`
 
@@ -27,7 +27,7 @@ You will also see any lint errors in the console.
 Builds the app for production to the `build` folder.\
 It correctly bundles project in production mode and optimizes the build for the best performance.
 
-### `npm test` TODO
+### `npm run test` TODO
 
 Launches the Tests using Jest.
 
