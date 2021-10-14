@@ -1,23 +1,22 @@
 const mongoose = require('mongoose');
 
-// https://stackoverflow.com/questions/8737082/mongoose-schema-within-schema
 const EventSchema = mongoose.Schema({
-    FirstName: {
+    firstName: {
         type: String,
         required: true
     },
-    LastName: {
+    lastName: {
         type: String,
         required: true
     },
-    Email: {
+    email: {
         type: String,
         required: true
     },
-    EventDate: {
+    eventDate: {
         type: Date,
         required: true
     },
 });
 
-export default mongoose.model('Event', EventSchema);
+export default mongoose.model('EventSchema', EventSchema);

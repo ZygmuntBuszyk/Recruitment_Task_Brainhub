@@ -11,11 +11,11 @@ following fields:
 ● Email (required, valid email address)
 ● Event date (required, simple date picker)
 
-## What's essential us?:
-● Tests for frontend and backend
-● Data validation on frontend and backend
-● Error handling
-● State management on frontend (form and request lifecycle state)
-● Readme with all information needed to install and run the app, run tests
-● Catalogs and components structure
-● Code readability and extensibility
+## What's essential?:
+● Tests for frontend and backend./
+● Data validation on frontend and backend./
+● Error handling./
+● State management on frontend (form and request lifecycle state)./
+● Readme with all information needed to install and run the app, run tests./
+● Catalogs and components structure./
+● Code readability and extensibility./

@@ -1,16 +1,15 @@
 import express from 'express';
-import loaders from './loaders/index';
+// import loaders from './loaders/index';
 import config from './config/index'
-// import { CreateSolFile } from './contracts/contractCreation.js';
 import dotenv from 'dotenv';
+
 async function main() {
-    // CreateSolFile('0x3D8E1467fEe7E1e62f2C5d506187A40dc40e2CE1');
-   
     // config() will read your .env file, parse the contents, assign it to process.env.
-    dotenv.config();
+    // dotenv.config();
     
     const app = express();
-    await loaders({ expressApp: app });
+    // await loaders({ expressApp: app });
+    await require('./loaders').default({ expressApp: app });
 
     app.listen(config.port, () => {  
         console.log(`Server up and running on ${config.port}`)
@@ -19,6 +18,21 @@ async function main() {
 
 main();
 
+// api -- handlers  / routes
+// services -- data
+// src
+// │   app.js          # App entry point
+// └───api             # Express route controllers for all the endpoints of the app
+// └───config          # Environment variables and configuration related stuff
+// └───jobs            # Jobs definitions for agenda.js
+// └───loaders         # Split the startup process into modules
+// └───models          # Database models
+// └───services        # All the business logic is here
+// └───subscribers     # Event handlers for async task
+// └───types           # Type declaration files (d.ts) for Typescript
+
+
+// controller - service layer - data access layer     -----   express route controller - service class - mongoose odm
 // --------------
 // https://khalilstemmler.com/blogs/typescript/node-starter-project/
 // https://softwareontheroad.com/ideal-nodejs-project-structure/#folder

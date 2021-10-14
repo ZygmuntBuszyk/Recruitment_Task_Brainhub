@@ -1,8 +1,15 @@
 import dotenv from 'dotenv';
-// config() will read your .env file, parse the contents, assign it to process.env.
-dotenv.config();
+
+const envFound = dotenv.config();
+
+if (envFound.error) {
+  throw new Error(" Couldn't find .env file");
+}
 
 export default {
   port: process.env.PORT,
-  databaseURL: process.env.DATABASE_URI,
+  databaseURL: process.env.DATABASE_URL,
+  api: {
+    prefix: '/api'
+  }
 }

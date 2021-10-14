@@ -1,13 +1,15 @@
 import mongoose from 'mongoose';
+import { Db } from 'mongodb';
+import config from '../config/index'
 
-export default async (): Promise<any> => { 
-  const connection = await mongoose.connect((process.env.DATABASE_URL as string), ({ useNewUrlParser: true } as mongoose.ConnectOptions))
-  return connection.connection.db;
+export default async (): Promise<Db> => { 
+  try {
+    const connection = await mongoose.connect((config.databaseURL as string), ({ useNewUrlParser: true } as mongoose.ConnectOptions));
+
+    return connection.connection.db;
+  } catch(err) {
+    console.log(err);
+    
+    throw err;
+  }
 }
-
-// mongoose.connect(process.env.ATLAS_DB_CONNECTION, { useNewUrlParser: true} );
-// var db = mongoose.connection;
-// db.on('error', console.error.bind(console, 'connection error:'));
-// db.once('open', function callback () {
-//   console.log("connected to DB");
-// });
