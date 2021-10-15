@@ -1,5 +1,5 @@
 import express from 'express';
-import  cors from 'cors';
+var cors = require('cors')
 import { Application } from 'express';
 import config from '../config/index'
 import routes from '../api/index';
@@ -11,6 +11,7 @@ export default async ({ app }: {app: Application}) => {
     app.head('/status', (req: any, res: any) => { res.status(200).end(); });
 
     app.use(cors());
+    app.options('*', cors())
     
     app.enable('trust proxy');
 

@@ -1,5 +1,6 @@
-# Backend part of Recruitment Task 
-I 've used Node.js server (with configured Typescript)  as well as MongoDb database (on local server)
+# Frontend part of Recruitment Task 
+Cleaned up CRA with simple folder structure and custom configuration.
+I've used Ant-Design for some fast frontend implementation.
 
 ## Scripts 
 In the project directory, you can run:
