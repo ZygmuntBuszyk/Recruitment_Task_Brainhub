@@ -27,9 +27,9 @@ You will also see any lint errors in the console.
 Builds the app for production to the `build` folder.\
 It correctly bundles project in production mode and optimizes the build for the best performance.
 
-### `npm run test` TODO
+### `npm run test` 
 
-Launches the Tests using Jest.
+Launches tsts using Jest.
 
 ### Database
 Project is using custom configuration for local mongoDb that connects to port '127.0.0.1'.

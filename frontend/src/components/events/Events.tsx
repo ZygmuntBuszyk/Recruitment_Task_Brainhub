@@ -3,13 +3,7 @@ import { useEffect } from 'react';
 import { Button, Input, Form, DatePicker } from 'antd';
 import moment from 'moment';
 import { createEvent } from '../../services/events/createEvents';
-
-export interface IEventRequest {
-  firstName: string;
-  lastName: string;
-  email: string;
-  eventDate: Date;
-}
+import { IEventRequest } from '../../services/events/api/apiModels/events';
 
 function Events() {
   const [form] = Form.useForm();

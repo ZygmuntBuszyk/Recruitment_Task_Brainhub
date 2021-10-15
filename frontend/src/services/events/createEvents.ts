@@ -1,9 +1,9 @@
-import { IEventRequest } from "../../components/events/Events";
 import api from '../api';
 import { message } from 'antd';
 import { appApiRoutes } from "../apiRoutes";
+import { IEventRequest, IEventResponse } from '../../services/events/api/apiModels/events';
 
-export const createEvent = async (values: IEventRequest) => {
+export const createEvent = async (values: IEventRequest): Promise<IEventResponse> => {
     return new Promise((resolve, reject) =>
         api
             .post(appApiRoutes.events.createEvent, values)
